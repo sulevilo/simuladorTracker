@@ -41,7 +41,7 @@ if "df" not in st.session_state:
     ])
 
 # --- TÍTULO ---
-st.title("⛴️ Tracker interactivo con bitácora y mapa")
+st.title("Tracker interactivo con bitácora y mapa")
 
 # --- FORMULARIO DE ENTRADA ---
 with st.form("input_form"):
@@ -98,10 +98,10 @@ if not st.session_state.df.empty:
         color="purple", weight=3
     ).add_to(m)
 
-    st.subheader("🗺️ Mapa del trayecto")
+    st.subheader("Mapa del trayecto")
     st_folium(m, width=700, height=500)
 
-    st.subheader("📒 Bitácora de posiciones")
+    st.subheader("Bitácora de posiciones")
     st.dataframe(df)
 else:
     st.info("Aún no hay posiciones registradas.")
